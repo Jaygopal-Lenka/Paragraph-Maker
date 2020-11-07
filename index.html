@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Paragraph Maker</title>
+    </head>
+    <body>
+        <h1>Paragraph Maker</h1>
+        <br>
+        <div id="div1">
+        <span>1.</span>
+        <input type="text" id="para1_input_1" placeholder="Input box 1">
+        <br><br>
+        <span>2.</span>
+        <input type="text" id="para1_input_2" placeholder="Input box 2">
+        <br><br>
+        <span>3.</span>
+        <input type="text" id="para1_input_3" placeholder="Input box 3">
+        <br><br>
+        <span>4.</span>
+        <input type="text" id="para1_input_4" placeholder="Input box 4">
+        <br><br>
+        <span>5.</span>
+        <input type="text" id="para1_input_5" placeholder="Input box 5">
+        <br><br>
+        <span>6.</span>
+        <input type="text" id="para1_input_6" placeholder="Input box 6">
+        <br><br>
+        <span>7.</span>
+        <input type="text" id="para1_input_7" placeholder="Input box 7">
+        <br><br>
+        <span>8.</span>
+        <input type="text" id="para1_input_8" placeholder="Input box 8">
+        <br><br>
+        <span>9.</span>
+        <input type="text" id="para1_input_9" placeholder="Input box 9">
+        <br><br>
+        <span>10.</span>
+        <input type="text" id="para1_input_10" placeholder="Input box 10">
+        <br><br>
+        <button class="btn-primary" onclick="getParagraph1()">Get Paragraph 1</button>
+    </div>
+    <div id="div2">
+        <span>1.</span>
+        <input type="text" id="para2_input_1" placeholder="Input box 1">
+        <br><br>
+        <span>2.</span>
+        <input type="text" id="para2_input_2" placeholder="Input box 2">
+        <br><br>
+        <span>3.</span>
+        <input type="text" id="para2_input_3" placeholder="Input box 3">
+        <br><br>
+        <span>4.</span>
+        <input type="text" id="para2_input_4" placeholder="Input box 4">
+        <br><br>
+        <span>5.</span>
+        <input type="text" id="para2_input_5" placeholder="Input box 5">
+        <br><br>
+        <span>6.</span>
+        <input type="text" id="para2_input_6" placeholder="Input box 6">
+        <br><br>
+        <span>7.</span>
+        <input type="text" id="para2_input_7" placeholder="Input box 7">
+        <br><br>
+        <span>8.</span>
+        <input type="text" id="para2_input_8" placeholder="Input box 8">
+        <br><br>
+        <span>9.</span>
+        <input type="text" id="para2_input_9" placeholder="Input box 9">
+        <br><br>
+        <span>10.</span>
+        <input type="text" id="para2_input_10" placeholder="Input box 10">
+        <br><br>
+        <button class="btn-primary" onclick="getParagraph2()">Get Paragraph 2</button>
+    </div>
+    <div><h2 id="showparagraph1"></h2></div>
+    <br>
+    <div><h2 id="showparagraph2"></h2></div>
+    </body>
+</html>
+<style>
+body{
+    text-align: center;
+}
+#div1,#div2{
+width: 100%;
+}
+</style>
+
+<script>
+    function getParagraph1()
+    {
+        var inputs=[];
+        for(var x=1; x<=10;x++)
+        {
+            inputs.push(document.getElementById("para1_input_" +x).value);
+        }
+        inputs.join(". ");
+        document.getElementById("showparagraph1").innerHTML=inputs.join(". ")
+    }
+    function getParagraph2()
+    {
+        var inputs=[];
+        for(var y=1; y<=10;y++)
+        {
+            inputs.push(document.getElementById("para2_input_" +y).value);
+        }
+        inputs.join(". ");
+        document.getElementById("showparagraph2").innerHTML=inputs.join(". ")
+    }
+</script>
